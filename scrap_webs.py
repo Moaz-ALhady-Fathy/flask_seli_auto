@@ -105,21 +105,21 @@ def pipe(input):
     per = (sum([is_hindi(x) for x in RemoveHTMLTags(wd.page_source)]) / (len(RemoveHTMLTags(wd.page_source))+1) ) * 100
     all_img , loaded_img , quality_img = img_quality(wd)
     
-    wd.get(input + "institution/google.html")
-    per1 = (sum([is_hindi(x) for x in RemoveHTMLTags(wd.page_source)]) / (len(RemoveHTMLTags(wd.page_source))+1) ) * 100
+#     wd.get(input + "institution/google.html")
+#     per1 = (sum([is_hindi(x) for x in RemoveHTMLTags(wd.page_source)]) / (len(RemoveHTMLTags(wd.page_source))+1) ) * 100
     
-    wd.get(input + "institution/amazon.html")
-    per2 = (sum([is_hindi(x) for x in RemoveHTMLTags(wd.page_source)]) / (len(RemoveHTMLTags(wd.page_source))+1) ) * 100
+#     wd.get(input + "institution/amazon.html")
+#     per2 = (sum([is_hindi(x) for x in RemoveHTMLTags(wd.page_source)]) / (len(RemoveHTMLTags(wd.page_source))+1) ) * 100
     
-    wd.get(input + "provider/coursera.html")
-    per3 = (sum([is_hindi(x) for x in RemoveHTMLTags(wd.page_source)]) / (len(RemoveHTMLTags(wd.page_source))+1) ) * 100
+#     wd.get(input + "provider/coursera.html")
+#     per3 = (sum([is_hindi(x) for x in RemoveHTMLTags(wd.page_source)]) / (len(RemoveHTMLTags(wd.page_source))+1) ) * 100
     
     result = {
         "Hover" : is_hover(wd),
         "per_translated_home " : per,
-        "per_translated_sample_1 " : per1,
-        "per_translated_sample_2 " : per2,
-        "per_translated_sample_3 " : per3,
+#         "per_translated_sample_1 " : per1,
+#         "per_translated_sample_2 " : per2,
+#         "per_translated_sample_3 " : per3,
         "num loaded images " : loaded_img ,
         "num of all images " : all_img ,
          "num of quality img " : quality_img ,
