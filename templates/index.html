@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Flask Text Input Example</title>
+  </head>
+  <body>
+    <form method="POST" action="{{ url_for('process_text') }}">
+      <label for="text">Enter some text:</label>
+      <input type="text" id="text" name="text">
+      <button type="submit">Submit</button>
+    </form>
+  </body>
+</html>
